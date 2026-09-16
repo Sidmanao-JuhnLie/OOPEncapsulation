@@ -1,4 +1,40 @@
 ﻿using System;
+
+class program
+{
+    static void Main(string[] args)
+    {
+        CarRental rental = new CarRental();
+
+
+        Console.Write("Enter Customer Name: ");
+        rental.customerName = Console.ReadLine();
+
+        Console.Write("Enter Daily Rate: ");
+        rental.dailyRate = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Enter Rental Days: ");
+        rental.rentalDays = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Enter Kilometers Traveled: ");
+        rental.kilometersTraveled = Convert.ToDouble(Console.ReadLine());
+
+
+        Console.WriteLine();
+        Console.WriteLine("----- CAR RENTAL SUMMARY -----");
+        Console.WriteLine("Customer Name       : " + rental.customerName);
+        Console.WriteLine("Daily Rate          : " + rental.dailyRate + ".00");
+        Console.WriteLine("Rental Days         : " + rental.rentalDays);
+        Console.WriteLine("Kilometers Traveled : " + rental.kilometersTraveled);
+        Console.WriteLine();
+        Console.WriteLine("Rental Charge       : " + rental.RentalCharge + ".00");
+        Console.WriteLine("Mileage Charge      : " + rental.MileageCharge + ".00");
+        Console.WriteLine("Insurance Fee       : " + rental.InsuranceFee + ".00");
+        Console.WriteLine("Discount Amount     : " + rental.DiscountAmount.ToString("0.00"));
+        Console.WriteLine("Total Rental Cost   : " + rental.TotalRentalCost + ".00");
+        Console.WriteLine("-----------------------------------");
+    }
+}
 class CarRental
 {
     private String CustomerName;
